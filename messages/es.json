@@ -1,0 +1,86 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Sebastián",
+    "title": "Ingeniero en Multimedia",
+    "subtitle": "Desarrollador Full-Stack especializado en WordPress, Next.js y e-commerce",
+    "location": "Pereira, Risaralda - Colombia",
+    "status": "Disponible para proyectos",
+    "cta": {
+      "connect": "Conectar",
+      "message": "Enviar mensaje",
+      "projects": "Ver Proyectos",
+      "download_cv": "Descargar CV"
+    }
+  },
+  "stats": {
+    "projects": "Proyectos",
+    "years_experience": "Años de experiencia",
+    "clients": "Clientes satisfechos",
+    "technologies": "Tecnologías"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "description": "Ingeniero en Multimedia con más de 4 años de experiencia creando experiencias web excepcionales. Especializado en desarrollo Full-Stack con WordPress, Next.js y soluciones e-commerce.",
+    "education": "Formación Académica",
+    "experience": "Experiencia Laboral"
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "current": "Actual",
+    "freelance_title": "Freelance Web Developer & E-commerce Specialist",
+    "freelance_company": "Independiente",
+    "freelance_description": "20+ proyectos entregados exitosamente en industrias como Tech, deportes, inmobiliaria y joyería de lujo."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "view_all": "Ver todos los proyectos",
+    "demo": "Ver Demo",
+    "code": "Ver Código",
+    "sevenclub": {
+      "title": "SevenClub - Marketplace de Influencers",
+      "description": "Plataforma completa conectando marcas con creadores de contenido"
+    },
+    "topuria": {
+      "title": "Ilia Topuria - Sitio Oficial UFC",
+      "description": "Estadísticas interactivas, galerías dinámicas, optimización premium"
+    },
+    "instinto": {
+      "title": "Instinto - Inmobiliaria Boutique",
+      "description": "Plataforma inmobiliaria para mercado premium de Cali"
+    }
+  },
+  "skills": {
+    "title": "Stack Tecnológico",
+    "frontend": "Frontend",
+    "backend": "Backend & Database",
+    "tools": "DevOps & Deployment"
+  },
+  "contact": {
+    "title": "¿Tienes un proyecto en mente?",
+    "subtitle": "Trabajemos juntos para crear algo increíble",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "send": "Enviar mensaje"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "menu": "Menú"
+  }
+}

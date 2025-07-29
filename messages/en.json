@@ -1,0 +1,86 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Sebastián",
+    "title": "Multimedia Engineer",
+    "subtitle": "Full-Stack Developer specialized in WordPress, Next.js and e-commerce",
+    "location": "Pereira, Risaralda - Colombia",
+    "status": "Available for projects",
+    "cta": {
+      "connect": "Connect",
+      "message": "Send message",
+      "projects": "View Projects",
+      "download_cv": "Download CV"
+    }
+  },
+  "stats": {
+    "projects": "Projects",
+    "years_experience": "Years of experience",
+    "clients": "Satisfied clients",
+    "technologies": "Technologies"
+  },
+  "about": {
+    "title": "About me",
+    "description": "Multimedia Engineer with over 4 years of experience creating exceptional web experiences. Specialized in Full-Stack development with WordPress, Next.js and e-commerce solutions.",
+    "education": "Academic Background",
+    "experience": "Work Experience"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current": "Current",
+    "freelance_title": "Freelance Web Developer & E-commerce Specialist",
+    "freelance_company": "Independent",
+    "freelance_description": "20+ projects successfully delivered across industries like Tech, sports, real estate and luxury jewelry."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "view_all": "View all projects",
+    "demo": "View Demo",
+    "code": "View Code",
+    "sevenclub": {
+      "title": "SevenClub - Influencer Marketplace",
+      "description": "Complete platform connecting brands with content creators"
+    },
+    "topuria": {
+      "title": "Ilia Topuria - Official UFC Site",
+      "description": "Interactive statistics, dynamic galleries, premium optimization"
+    },
+    "instinto": {
+      "title": "Instinto - Boutique Real Estate",
+      "description": "Real estate platform for Cali's premium market"
+    }
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend & Database",
+    "tools": "DevOps & Deployment"
+  },
+  "contact": {
+    "title": "Have a project in mind?",
+    "subtitle": "Let's work together to create something amazing",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send message"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu"
+  }
+}

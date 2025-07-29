@@ -1,0 +1,295 @@
+/* src/styles/globals.css */
+@import "tailwindcss";
+
+/* Variables CSS para temas light/dark */
+@layer theme {
+  :root {
+    /* Tema claro (light) */
+    --background: #FEFDFF;
+    --foreground: #161925;
+    --muted: #F8F7F9;
+    --muted-foreground: #6A707A;
+    --card: #FEFDFF;
+    --card-foreground: #161925;
+    --popover: #FEFDFF;
+    --popover-foreground: #161925;
+    --border: #E8E6EA;
+    --input: #E8E6EA;
+    --primary-foreground: #FEFDFF;
+    --secondary-foreground: #FEFDFF;
+    --accent-bg: #F8F7F9;
+    --accent-foreground: #161925;
+    --destructive: #dc2626;
+    --destructive-foreground: #FEFDFF;
+    --ring: #760C0F;
+  }
+
+  /* Tema oscuro personalizado */
+  .dark {
+    --background: #161925;
+    --foreground: #FEFDFF;
+    --muted: #2F3338;
+    --muted-foreground: #B5B1BA;
+    --card: #161925;
+    --card-foreground: #FEFDFF;
+    --popover: #161925;
+    --popover-foreground: #FEFDFF;
+    --border: #4A4F57;
+    --input: #4A4F57;
+    --primary-foreground: #FEFDFF;
+    --secondary-foreground: #161925;
+    --accent-bg: #2F3338;
+    --accent-foreground: #FEFDFF;
+    --destructive: #ef4444;
+    --destructive-foreground: #161925;
+    --ring: #760C0F;
+  }
+}
+
+/* Estilos base */
+@layer base {
+  * {
+    border-color: var(--border);
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* Mejoras de tipografía */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #dc2626;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #b91c1c;
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--muted);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted-foreground);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #dc2626;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--muted-foreground) var(--muted);
+  }
+}
+
+/* Animaciones de entrada globales */
+@layer components {
+  /* Focus states personalizados */
+  .focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 2px #dc2626, 0 0 0 4px var(--background);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .focus-ring:focus {
+    box-shadow: 0 0 0 2px #dc2626, 0 0 0 4px var(--background);
+  }
+
+  /* Utilidades de glassmorphism */
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(254, 253, 255, 0.85);
+    border: 1px solid rgba(125, 132, 145, 0.15);
+  }
+
+  .dark .glass {
+    background: rgba(22, 25, 37, 0.85);
+    border: 1px solid rgba(125, 132, 145, 0.2);
+  }
+
+  /* Contenedores responsivos con mejor espaciado */
+  .container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-custom {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding: 0 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-custom {
+      padding: 0 4rem;
+    }
+  }
+
+  /* Estados de hover más suaves */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Secciones con variaciones de fondo */
+  .section-primary {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  .section-muted {
+    background: var(--muted);
+    color: var(--foreground);
+  }
+
+  .section-accent {
+    background: #760C0F;
+    color: #FEFDFF;
+  }
+
+  .dark .section-accent {
+    background: #8B1538;
+    color: #FEFDFF;
+  }
+
+  /* Clases de texto para diferentes secciones */
+  .section-accent .text-gray-900 {
+    color: #FEFDFF !important;
+  }
+
+  .section-accent .text-gray-600 {
+    color: rgba(254, 253, 255, 0.8) !important;
+  }
+
+  .section-accent .text-gray-400 {
+    color: rgba(254, 253, 255, 0.7) !important;
+  }
+
+  .section-accent .dark\:text-white {
+    color: #FEFDFF !important;
+  }
+
+  .section-accent .dark\:text-gray-400 {
+    color: rgba(254, 253, 255, 0.7) !important;
+  }
+
+  .section-accent .border-gray-200 {
+    border-color: rgba(254, 253, 255, 0.2) !important;
+  }
+
+  .section-accent .dark\:border-gray-700 {
+    border-color: rgba(254, 253, 255, 0.3) !important;
+  }
+
+  .section-accent .bg-white {
+    background-color: rgba(254, 253, 255, 0.1) !important;
+  }
+
+  .section-accent .dark\:bg-gray-800 {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Efecto Glass mejorado para navegación */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-nav {
+    background: rgba(22, 25, 37, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Mejora de backdrop-filter para mejor soporte */
+  @supports (backdrop-filter: blur(20px)) {
+    .backdrop-blur-xl {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  }
+
+  @supports not (backdrop-filter: blur(20px)) {
+    .backdrop-blur-xl {
+      background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .dark .backdrop-blur-xl {
+      background: rgba(22, 25, 37, 0.9);
+    }
+  }
+}
