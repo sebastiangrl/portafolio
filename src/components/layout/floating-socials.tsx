@@ -10,21 +10,18 @@ const socials = [
     name: 'Email',
     icon: Mail,
     href: 'mailto:tu-email@ejemplo.com',
-    color: 'hover:bg-blue-600',
     delay: 0.1
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
     href: 'https://linkedin.com/in/tu-perfil',
-    color: 'hover:bg-blue-700',
     delay: 0.2
   },
   {
     name: 'Instagram',
     icon: Instagram,
     href: 'https://instagram.com/tu-usuario',
-    color: 'hover:bg-pink-600',
     delay: 0.3
   },
   {
@@ -40,14 +37,12 @@ const socials = [
       </svg>
     ),
     href: 'https://tiktok.com/@tu-usuario',
-    color: 'hover:bg-black',
     delay: 0.4
   },
   {
     name: 'GitHub',
     icon: Github,
     href: 'https://github.com/tu-usuario',
-    color: 'hover:bg-gray-800',
     delay: 0.5
   }
 ];
@@ -72,7 +67,7 @@ export function FloatingSocials() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
     >
-      <div className="flex flex-col space-y-3">
+      <div className="flex flex-col space-y-4">
         {socials.map((social, index) => {
           const Icon = social.icon;
           
@@ -89,24 +84,16 @@ export function FloatingSocials() {
                 delay: social.delay,
                 ease: 'easeOut'
               }}
-              className={`
-                group relative flex items-center justify-center 
-                w-12 h-12 bg-white/90 dark:bg-gray-900/90 
-                backdrop-blur-sm rounded-full shadow-lg 
-                border border-gray-200/50 dark:border-gray-700/50
-                text-gray-600 dark:text-gray-400 
-                hover:text-white transition-all duration-300 
-                transform hover:scale-110 hover:-translate-x-1
-                ${social.color}
-              `}
-              whileHover={{ scale: 1.1, x: -4 }}
+              className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 text-white transition-all duration-300 backdrop-blur-sm group"
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               <Icon className="w-5 h-5" />
               
               {/* Tooltip */}
-              <div className="absolute left-full ml-3 px-2 py-1 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              <div className="absolute left-full ml-3 px-3 py-2 bg-gray-900/90 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap backdrop-blur-sm border border-gray-700/50">
                 {social.name}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-2 h-2 bg-gray-900/90 rotate-45 border-l border-b border-gray-700/50"></div>
               </div>
             </motion.a>
           );

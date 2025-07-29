@@ -6,7 +6,11 @@
     "projects": "Proyectos",
     "skills": "Habilidades",
     "contact": "Contacto",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "work": "Trabajo",
+    "illustrations": "Ilustraciones",
+    "development": "Desarrollo",
+    "process": "Proceso"
   },
   "hero": {
     "greeting": "Hola, soy",
@@ -15,11 +19,31 @@
     "subtitle": "Desarrollador Full-Stack especializado en WordPress, Next.js y e-commerce",
     "location": "Pereira, Risaralda - Colombia",
     "status": "Disponible para proyectos",
+    "modes": {
+      "illustration": "Ilustrador",
+      "developer": "Desarrollador",
+      "illustrator": "Ilustrador"
+    },
+    "roles": {
+      "digital_illustrator": "Ilustrador Digital",
+      "fullstack_developer": "Desarrollador Full-Stack"
+    },
+    "descriptions": {
+      "illustration": "Creando mundos visuales que inspiran y conectan emociones a través del arte digital",
+      "development": "Construyendo experiencias web excepcionales con código limpio y arquitecturas escalables"
+    },
+    "skills": {
+      "illustration": ["Illustrator", "Photoshop", "Diseño de Personajes", "Arte Digital"],
+      "development": ["Next.js", "React", "TypeScript", "WordPress"]
+    },
     "cta": {
       "connect": "Conectar",
       "message": "Enviar mensaje",
       "projects": "Ver Proyectos",
-      "download_cv": "Descargar CV"
+      "download_cv": "Descargar CV",
+      "explore_work": "Explorar Mi Trabajo",
+      "collaborate": "Colaboremos",
+      "discover_work": "Descubre mi trabajo"
     }
   },
   "stats": {
@@ -74,6 +98,9 @@
       "message": "Mensaje",
       "send": "Enviar mensaje"
     }
+  },
+  "work_selector": {
+    "subtitle": "Selecciona para ver mis proyectos"
   },
   "common": {
     "loading": "Cargando...",

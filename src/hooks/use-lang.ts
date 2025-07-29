@@ -2,7 +2,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { useTransition } from 'react';
 
 export interface UseLangReturn {
@@ -22,13 +22,10 @@ export function useLang(): UseLangReturn {
 
   const setLocale = (newLocale: string) => {
     startTransition(() => {
-      // Remover el locale actual del pathname si existe
-      const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, '');
-      const newPath = newLocale === 'es' 
-        ? pathWithoutLocale || '/' 
-        : `/${newLocale}${pathWithoutLocale || '/'}`;
-      
-      router.push(newPath);
+      // Con localePrefix 'as-needed', next-intl maneja automáticamente:
+      // - Si newLocale es 'es' (por defecto), irá a '/'
+      // - Si newLocale es 'en', irá a '/en'
+      router.push(pathname, { locale: newLocale });
     });
   };
 

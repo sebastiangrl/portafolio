@@ -5,11 +5,14 @@ export const routing = defineRouting({
   // Lista de locales soportados
   locales: ['es', 'en'],
   
-  // Locale por defecto
+  // Locale por defecto (español)
   defaultLocale: 'es',
   
-  // Configuración de prefijos
-  localePrefix: 'as-needed' // Solo agrega prefijo cuando no es el idioma por defecto
+  // Configuración de prefijos - solo mostrar cuando NO es el idioma por defecto
+  localePrefix: 'as-needed', // '/' será español, '/en' será inglés
+  
+  // Configuración adicional para detección automática
+  localeDetection: true
 });
 
 // Tipos para TypeScript

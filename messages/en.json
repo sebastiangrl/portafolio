@@ -6,7 +6,11 @@
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "work": "Work",
+    "illustrations": "Illustrations",
+    "development": "Development",
+    "process": "Process"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -15,11 +19,31 @@
     "subtitle": "Full-Stack Developer specialized in WordPress, Next.js and e-commerce",
     "location": "Pereira, Risaralda - Colombia",
     "status": "Available for projects",
+    "modes": {
+      "illustration": "Illustrator",
+      "developer": "Developer",
+      "illustrator": "Illustrator"
+    },
+    "roles": {
+      "digital_illustrator": "Digital Illustrator",
+      "fullstack_developer": "Full-Stack Developer"
+    },
+    "descriptions": {
+      "illustration": "Creating visual worlds that inspire and connect emotions through digital art",
+      "development": "Building exceptional web experiences with clean code and scalable architectures"
+    },
+    "skills": {
+      "illustration": ["Illustrator", "Photoshop", "Character Design", "Digital Art"],
+      "development": ["Next.js", "React", "TypeScript", "WordPress"]
+    },
     "cta": {
       "connect": "Connect",
       "message": "Send message",
       "projects": "View Projects",
-      "download_cv": "Download CV"
+      "download_cv": "Download CV",
+      "explore_work": "Explore My Work",
+      "collaborate": "Let's Collaborate",
+      "discover_work": "Discover my work"
     }
   },
   "stats": {
@@ -74,6 +98,9 @@
       "message": "Message",
       "send": "Send message"
     }
+  },
+  "work_selector": {
+    "subtitle": "Select to view my projects"
   },
   "common": {
     "loading": "Loading...",
