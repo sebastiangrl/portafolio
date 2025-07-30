@@ -5,6 +5,8 @@ import * as React from 'react';
 import { FloatingNavCreative } from './floating-nav-creative';
 import { ScrollProgress } from './scroll-progress';
 import { FloatingSocials } from './floating-socials';
+import { ModeSwitcher } from './mode-switcher';
+import { Footer } from './footer';
 
 interface CreativeLayoutProps {
   children: React.ReactNode;
@@ -16,9 +18,11 @@ export function CreativeLayout({ children }: CreativeLayoutProps) {
       <ScrollProgress />
       <FloatingNavCreative />
       <FloatingSocials />
+      <ModeSwitcher />
       <main>
         {children}
       </main>
+      <Footer />
     </div>
   );
 }

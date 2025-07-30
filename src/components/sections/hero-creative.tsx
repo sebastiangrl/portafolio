@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Palette, Code2, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { scrollToElement } from '@/lib/utils';
@@ -11,19 +11,6 @@ import Image from 'next/image';
 
 export function HeroCreative() {
   const t = useTranslations('hero');
-  const tWorkSelector = useTranslations('work_selector');
-  const [currentMode, setCurrentMode] = React.useState<'illustration' | 'development'>('development');
-
-  // Función para manejar el cambio de modo y navegar
-  const handleModeChange = (mode: 'illustration' | 'development') => {
-    setCurrentMode(mode);
-    // Navegar a la sección correspondiente
-    if (mode === 'illustration') {
-      scrollToElement('illustration-projects');
-    } else {
-      scrollToElement('development-projects');
-    }
-  };
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -157,38 +144,6 @@ export function HeroCreative() {
             </motion.div>
           </motion.div>
         </motion.div>
-      </div>
-
-      {/* Fixed Work Type Selector - Nav Bottom */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="flex items-center bg-black/20 backdrop-blur-md rounded-xl p-1 border border-white/20 shadow-2xl">
-          <motion.button
-            onClick={() => handleModeChange('development')}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${
-              currentMode === 'development' 
-                ? 'bg-white text-gray-900 shadow-lg' 
-                : 'text-white hover:bg-white/10'
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <Code2 className="w-4 h-4 mr-2 inline" />
-            {t('modes.developer')}
-          </motion.button>
-          <motion.button
-            onClick={() => handleModeChange('illustration')}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${
-              currentMode === 'illustration' 
-                ? 'bg-white text-gray-900 shadow-lg' 
-                : 'text-white hover:bg-white/10'
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <Palette className="w-4 h-4 mr-2 inline" />
-            {t('modes.illustrator')}
-          </motion.button>
-        </div>
       </div>
     </div>
   );

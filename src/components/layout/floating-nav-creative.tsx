@@ -3,18 +3,22 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Palette, Code, User, Mail, Menu, X } from 'lucide-react';
+import { Palette, Code, User, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { cn, scrollToElement } from '@/lib/utils';
 
 const navigation = [
-  { key: 'navigation.work', href: '#work-selector', icon: Palette },
+  { key: 'navigation.home', href: '#hero', icon: Home },
   { key: 'navigation.illustrations', href: '#illustrations', icon: Palette },
   { key: 'navigation.development', href: '#development', icon: Code },
-  { key: 'navigation.process', href: '#process', icon: User },
   { key: 'navigation.contact', href: '#contact', icon: Mail },
+];
+
+const creativeDropdown = [
+  { key: 'navigation.blog', href: '/blog', icon: Edit },
+  { key: 'navigation.stories', href: '/stories', icon: BookOpen },
 ];
 
 export function FloatingNavCreative() {
@@ -26,6 +30,9 @@ export function FloatingNavCreative() {
     if (href.startsWith('#')) {
       scrollToElement(href.substring(1));
       setIsMobileMenuOpen(false);
+    } else if (href.startsWith('/')) {
+      // Navigate to separate page
+      window.location.href = href;
     }
   };
 
@@ -62,6 +69,34 @@ export function FloatingNavCreative() {
                   </button>
                 );
               })}
+              
+              {/* Creative Dropdown */}
+              <div className="relative group">
+                <button className="flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-white hover:bg-white/10">
+                  <Feather className="w-4 h-4" />
+                  <span>{t('navigation.creative')}</span>
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-full mt-2 right-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="bg-black/20 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl py-2 min-w-[150px]">
+                    {creativeDropdown.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <a
+                          key={item.key}
+                          href={item.href}
+                          className="flex items-center space-x-3 px-4 py-2 text-white hover:bg-white/10 transition-all duration-200 block"
+                        >
+                          <Icon className="w-4 h-4" />
+                          <span>{t(item.key)}</span>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
             </div>
             
             <div className="flex items-center space-x-3 border-l border-white/20 pl-6">
@@ -109,6 +144,26 @@ export function FloatingNavCreative() {
                     </button>
                   );
                 })}
+                
+                {/* Creative Dropdown Mobile */}
+                <div className="space-y-1">
+                  <div className="px-4 py-2 text-white/70 text-sm font-medium">
+                    {t('navigation.creative')}
+                  </div>
+                  {creativeDropdown.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <a
+                        key={item.key}
+                        href={item.href}
+                        className="w-full flex items-center space-x-3 px-6 py-2 text-left text-white hover:bg-white/10 rounded-lg transition-all duration-200 text-sm"
+                      >
+                        <Icon className="w-4 h-4" />
+                        <span>{t(item.key)}</span>
+                      </a>
+                    );
+                  })}
+                </div>
                 
                 <div className="border-t border-white/20 pt-2 mt-2">
                   <div className="flex items-center space-x-3 px-4">

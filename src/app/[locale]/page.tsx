@@ -1,12 +1,13 @@
 // src/app/[locale]/page.tsx
 import { CreativeLayout } from '@/components/layout/creative-layout';
 import { HeroCreative } from '@/components/sections/hero-creative';
-import { WorkSelector } from '@/components/sections/work-selector';
 import { IllustrationGallery } from '@/components/creative/illustration-gallery';
 import { DevShowcase } from '@/components/creative/dev-showcase';
-import { CreativeProcess } from '@/components/creative/creative-process';
+import { TechSkills } from '@/components/creative/tech-skills';
 import { AboutDual } from '@/components/sections/about-dual';
 import { ContactCreative } from '@/components/sections/contact-creative';
+import { SupportSection } from '@/components/sections/support-section';
+import { SectionTransition } from '@/components/ui/section-transition';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -22,11 +23,6 @@ export default async function HomePage({ params }: PageProps) {
         <HeroCreative />
       </section>
 
-      {/* Selector de trabajo - Illustration vs Development */}
-      <section id="work-selector" className="py-20 section-primary">
-        <WorkSelector />
-      </section>
-
       {/* Galería de ilustraciones */}
       <section id="illustrations" className="py-24 section-muted">
         <IllustrationGallery />
@@ -37,19 +33,27 @@ export default async function HomePage({ params }: PageProps) {
         <DevShowcase />
       </section>
 
-      {/* Proceso creativo */}
-      <section id="process" className="py-24 section-primary">
-        <CreativeProcess />
+      {/* Tech Skills */}
+      <section id="skills" className="section-primary">
+        <TechSkills />
       </section>
 
+      {/* Elegant Transition */}
+      <SectionTransition variant="gradient" />
+
       {/* About dual */}
-      <section id="about" className="py-24 section-muted">
+      <section id="about" className="section-primary">
         <AboutDual />
       </section>
 
       {/* Contact */}
       <section id="contact" className="py-20 section-accent">
         <ContactCreative />
+      </section>
+
+      {/* Support Section */}
+      <section id="support" className="section-primary">
+        <SupportSection />
       </section>
     </CreativeLayout>
   );

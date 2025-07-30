@@ -30,3 +30,11 @@ Te doy el conexto de todo mi vida laboral para que entiendas un poco.
 Otra faceta importante de mi vida es la creatividad, empecé mi carrera de ingenieria multimedia porque desde pequeño me gustaban los videojuegos y dibujar, quiero que mi web refleje esa creatividad, ese arte a la vez que esa parte ingenieril.
 
 Algo nuevo que quiero incluir es que me quiero enfocar también en la escritura, quiero crear fragmentos de pequeñas historias y con mis ilustraciones.
+
+Contacto:
+- WhatsApp: +573015649746
+- Instagram:
+- GitHub: https://github.com/sebastiangrl/
+- TikTok:
+- Linkedin: https://www.linkedin.com/in/j-sebastian-gonzalez/
+- Email: hola@jsebastiangonzalez.com

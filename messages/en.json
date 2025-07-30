@@ -6,11 +6,14 @@
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
+    "support": "Support",
     "dashboard": "Dashboard",
     "work": "Work",
     "illustrations": "Illustrations",
     "development": "Development",
-    "process": "Process"
+    "creative": "Creative",
+    "stories": "Stories",
+    "blog": "Blog"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -46,6 +49,9 @@
       "discover_work": "Discover my work"
     }
   },
+  "illustrations": {
+    "title": "Creative Gallery"
+  },
   "stats": {
     "projects": "Projects",
     "years_experience": "Years of experience",
@@ -53,10 +59,145 @@
     "technologies": "Technologies"
   },
   "about": {
-    "title": "About me",
-    "description": "Multimedia Engineer with over 4 years of experience creating exceptional web experiences. Specialized in Full-Stack development with WordPress, Next.js and e-commerce solutions.",
-    "education": "Academic Background",
-    "experience": "Work Experience"
+    "title": "About Me",
+    "subtitle": "I'm a {role} living at the intersection of art and technology. My passion is creating digital experiences that inspire and connect with people.",
+    "role": "Multimedia Engineer",
+    "story": {
+      "title": "My Story",
+      "paragraphs": {
+        "intro": "My fascination with digital worlds began as a child, when video games and drawing captured my imagination. This passion led me to study {degree}, where I discovered I could fuse art with technology professionally.",
+        "education": "During my academic training (2015-2021), I developed a solid foundation in programming with {technologies}, while exploring data structures, design patterns, and SOLID principles. This technical base allowed me to understand not just the \"what\" but the \"how\" and \"why\" of development.",
+        "evolution": "My professional evolution has been a constant quest to perfect this {duality}. I started as a graphic designer and motion graphics artist, working in social media, book covers, and branding, but soon moved toward web development.",
+        "experience": "With {years} specializing in WordPress and developing e-commerce and corporate sites, I've completed over 35 projects as an independent freelancer. Recently, my focus has expanded to modern technologies like {modern_tech} in development.",
+        "current": "Currently, I'm exploring a new creative facet: {writing}. I want to create fragments of small stories accompanied by my illustrations, combining visual and textual narrative in a complete multimedia experience."
+      },
+      "degree": "Multimedia Engineering",
+      "technologies": "C++, Java, JavaScript, and PHP",
+      "duality": "creative-technical duality",
+      "years": "5 years",
+      "modern_tech": "Next.js, Astro, Flutter and AI integration",
+      "writing": "writing",
+      "read_more": "Read more",
+      "read_less": "Read less"
+    },
+    "journey": {
+      "title": "My Journey",
+      "items": {
+        "university": {
+          "title": "Multimedia Engineering",
+          "institution": "Universidad de San Buenaventura, Cali",
+          "description": "Comprehensive training in web development, UX/UI design and multimedia technologies. Solid foundation in programming with C++, Java, JavaScript and PHP.",
+          "technologies": ["C++", "Java", "JavaScript", "PHP", "Structures & OOP", "Design Patterns"]
+        },
+        "diploma": {
+          "title": "Web Application Development Diploma",
+          "institution": "Universidad de Caldas - MinTic",
+          "description": "Intensive 6-month specialization in modern web technologies, Node.js and React Native for application development.",
+          "technologies": ["Node.js", "React Native", "Modern Web APIs", "Mobile Development"]
+        },
+        "evolution": {
+          "title": "Professional Evolution",
+          "institution": "Freelance & Continuous Learning",
+          "description": "Transition from multimedia designer to fullstack developer. Mastery of WordPress, Next.js, Astro and modern technologies.",
+          "technologies": ["WordPress", "Next.js", "Astro", "Supabase", "Tailwind CSS", "TypeScript"]
+        },
+        "current": {
+          "title": "Multimedia Engineer",
+          "institution": "35+ Completed Projects",
+          "description": "Consolidation as an independent specialist in projects that fuse creativity and technology, with national and international clients.",
+          "technologies": ["React", "Flutter", "AI Integration", "E-commerce", "Custom Plugins"]
+        }
+      },
+      "technologies_label": "Technologies:"
+    },
+    "interests": {
+      "title": "Sources of Inspiration",
+      "subtitle": "The passions that fuel my creativity and development",
+      "items": {
+        "gaming": {
+          "name": "Gaming",
+          "description": "Inspiration for character design"
+        },
+        "scifi": {
+          "name": "Sci-Fi",
+          "description": "Futurism and technology"
+        },
+        "music": {
+          "name": "Electronic Music",
+          "description": "Creativity and focus"
+        },
+        "coffee": {
+          "name": "Coffee",
+          "description": "Fuel for creating"
+        },
+        "writing": {
+          "name": "Writing",
+          "description": "Creating illustrated stories"
+        },
+        "art": {
+          "name": "Digital Art",
+          "description": "Illustration and character design"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together!",
+    "subtitle": "Do you have a project in mind? I love collaborating on innovative ideas.",
+    "cta": "Choose your preferred way to contact me",
+    "methods": {
+      "email": {
+        "title": "Email",
+        "description": "For projects and collaborations",
+        "action": "Write email"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "For quick inquiries",
+        "action": "Send message"
+      },
+      "typeform": {
+        "title": "Form",
+        "description": "Tell me about your project",
+        "action": "Complete form"
+      }
+    },
+    "social": {
+      "title": "Follow me on social media",
+      "github": "Code and projects",
+      "linkedin": "Professional network",
+      "instagram": "Art and creativity"
+    },
+    "location": "Colombia • Available globally"
+  },
+  "support": {
+    "title": "Buy Me a Coffee",
+    "subtitle": "If my work has inspired or helped you, you can support me with a small donation.",
+    "description": "Your support allows me to keep creating content and illustrations.",
+    "support_button": "Support now",
+    "options": {
+      "custom": {
+        "title": "Support"
+      }
+    },
+    "thanks": {
+      "message": "Every bit of support means a lot to me and motivates me to keep creating."
+    }
+  },
+  "footer": {
+    "work": "Work",
+    "info": "Information", 
+    "follow_me": "Follow me:",
+    "support_now": "Support now",
+    "rights": "All rights reserved.",
+    "made_with": "Made with",
+    "in_colombia": "in Colombia",
+    "scroll_to_top": "Scroll to top",
+    "contact": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location"
+    }
   },
   "experience": {
     "title": "Professional Experience",
@@ -89,18 +230,42 @@
     "backend": "Backend & Database",
     "tools": "DevOps & Deployment"
   },
-  "contact": {
-    "title": "Have a project in mind?",
-    "subtitle": "Let's work together to create something amazing",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "send": "Send message"
-    }
+  "blog": {
+    "title": "Blog",
+    "description": "Thoughts, insights, and learnings from the intersection of development and design",
+    "post1": {
+      "title": "The Art of Code",
+      "excerpt": "Exploring the creative process behind building beautiful digital experiences",
+      "date": "Coming Soon"
+    },
+    "post2": {
+      "title": "Design Systems",
+      "excerpt": "How to create consistent and scalable design patterns for modern applications",
+      "date": "Coming Soon"
+    },
+    "post3": {
+      "title": "Future of Web",
+      "excerpt": "Emerging technologies that are shaping the next generation of web experiences",
+      "date": "Coming Soon"
+    },
+    "readMore": "Read more",
+    "comingSoon": "New articles coming soon. Stay tuned for insights on development, design, and creativity."
   },
-  "work_selector": {
-    "subtitle": "Select to view my projects"
+  "stories": {
+    "title": "Stories",
+    "description": "Creative narratives and visual journeys that explore imagination and storytelling",
+    "story1": {
+      "title": "Digital Dreams",
+      "excerpt": "A visual exploration of the intersection between technology and human creativity, where code becomes art and pixels tell stories",
+      "category": "Digital Art"
+    },
+    "story2": {
+      "title": "Code Chronicles",
+      "excerpt": "Behind-the-scenes stories of building digital experiences, the challenges faced, and the creative solutions discovered",
+      "category": "Development"
+    },
+    "readStory": "Read story",
+    "comingSoon": "New stories coming soon. A space where creativity meets technology and imagination becomes reality."
   },
   "common": {
     "loading": "Loading...",
