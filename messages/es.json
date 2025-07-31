@@ -15,8 +15,8 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Sebastián",
-    "title": "Ingeniero en Multimedia",
-    "subtitle": "Desarrollador Full-Stack especializado en WordPress, Next.js y e-commerce",
+    "title": "Creo sitios web y soluciones digitales para tu negocio",
+    "subtitle": "Ingeniero Multimedia con más de 5 años construyendo tiendas online, páginas corporativas y aplicaciones web personalizadas. Ayudo a empresas a crecer en internet con tecnología moderna.",
     "location": "Pereira, Risaralda - Colombia",
     "status": "Disponible para proyectos",
     "modes": {
@@ -36,13 +36,19 @@
       "illustration": ["Illustrator", "Photoshop", "Diseño de Personajes", "Arte Digital"],
       "development": ["Next.js", "React", "TypeScript", "WordPress"]
     },
+    "services": {
+      "ecommerce": "Tiendas Online",
+      "corporate": "Páginas Corporativas", 
+      "webapps": "Aplicaciones Web",
+      "design": "Diseño UI/UX"
+    },
     "cta": {
       "connect": "Conectar",
       "message": "Enviar mensaje",
       "projects": "Ver Proyectos",
       "download_cv": "Descargar CV",
-      "explore_work": "Explorar Mi Trabajo",
-      "collaborate": "Colaboremos",
+      "explore_work": "Ver Mi Trabajo",
+      "collaborate": "Iniciar Tu Proyecto",
       "discover_work": "Descubre mi trabajo"
     }
   },
@@ -191,6 +197,8 @@
     },
     "features": "Características Clave",
     "technologies": "Tecnologías",
+    "results": "Resultados",
+    "client": "Cliente",
     "stats_labels": {
       "performance": "Rendimiento",
       "mobile_score": "Puntuación Móvil",
@@ -242,6 +250,7 @@
     }
   },
   "footer": {
+    "role": "Ingeniero Multimedia",
     "work": "Trabajo",
     "info": "Información",
     "follow_me": "Sígueme:",

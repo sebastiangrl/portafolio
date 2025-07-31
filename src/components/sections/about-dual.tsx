@@ -65,7 +65,7 @@ export function AboutDual() {
   };
 
   return (
-    <div className="section-primary">
+    <div className="section-about py-20">
       <div className="max-w-7xl mx-auto container-custom">
         {/* Header */}
         <motion.div
@@ -75,10 +75,10 @@ export function AboutDual() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal dark:text-pearl mb-8 decoration-line">
+          <h2 className="font-filena text-4xl md:text-5xl lg:text-6xl text-charcoal dark:text-pearl mb-8 decoration-line">
             {t('title')}
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-charcoal dark:text-pearl max-w-4xl mx-auto leading-relaxed">
             {t('subtitle', { role: t('role') })}
           </p>
         </motion.div>
@@ -92,11 +92,11 @@ export function AboutDual() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-light text-gray-900 dark:text-white mb-8">
+            <h3 className="text-3xl font-light text-charcoal dark:text-pearl mb-8">
               {t('story.title')}
             </h3>
             
-            <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+            <div className="space-y-6 text-charcoal dark:text-pearl leading-relaxed text-justify">
               <p>
                 {t('story.paragraphs.intro', { degree: t('story.degree') })}
               </p>
@@ -132,7 +132,7 @@ export function AboutDual() {
               
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="inline-flex items-center px-4 py-2 bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 rounded-lg hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-200 text-[#760C0F] font-medium"
+                className="inline-flex items-center text-[#760C0F] hover:text-[#8B1538] transition-colors duration-200 font-medium underline decoration-dotted underline-offset-4 hover:no-underline"
               >
                 {isExpanded ? t('story.read_less') : t('story.read_more')}
                 <motion.div
@@ -155,21 +155,21 @@ export function AboutDual() {
             className="relative"
           >
             <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl font-light text-gray-900 dark:text-white">
+              <h3 className="text-2xl font-light text-charcoal dark:text-pearl">
                 {t('journey.title')}
               </h3>
               <div className="flex space-x-2">
                 <button
                   onClick={prevJourney}
-                  className="p-2 rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-200"
+                  className="p-2 rounded-lg bg-gray-100/50 dark:bg-black/10 backdrop-blur-sm border border-gray-200 dark:border-gray-700/50 hover:bg-gray-200/50 dark:hover:bg-black/20 transition-all duration-200 shadow-sm"
                 >
-                  <ChevronLeft className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                  <ChevronLeft className="w-4 h-4 text-charcoal dark:text-pearl" />
                 </button>
                 <button
                   onClick={nextJourney}
-                  className="p-2 rounded-lg bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 hover:bg-white/20 dark:hover:bg-black/20 transition-all duration-200"
+                  className="p-2 rounded-lg bg-gray-100/50 dark:bg-black/10 backdrop-blur-sm border border-gray-200 dark:border-gray-700/50 hover:bg-gray-200/50 dark:hover:bg-black/20 transition-all duration-200 shadow-sm"
                 >
-                  <ChevronRight className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                  <ChevronRight className="w-4 h-4 text-charcoal dark:text-pearl" />
                 </button>
               </div>
             </div>
@@ -190,38 +190,38 @@ export function AboutDual() {
                     const Icon = item.icon;
                     
                     return (
-                      <div className="h-full bg-white/10 dark:bg-black/10 backdrop-blur-sm border border-white/20 dark:border-gray-700/50 rounded-2xl p-8">
+                      <div className="h-full backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8 shadow-lg">
                         {/* Icon and Year */}
                         <div className="flex items-center justify-between mb-6">
                           <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#760C0F] to-[#A31B1B] rounded-xl flex items-center justify-center shadow-lg">
                             <Icon className="w-8 h-8 text-white" />
                           </div>
-                          <span className="text-sm text-gray-500 dark:text-gray-400 bg-white/20 dark:bg-black/20 px-3 py-1 rounded-full">
+                          <span className="text-sm text-charcoal dark:text-pearl px-3 py-1 rounded-md border border-gray-300 dark:border-gray-600">
                             {item.year}
                           </span>
                         </div>
 
                         {/* Content */}
                         <div className="space-y-4">
-                          <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
+                          <h4 className="text-xl font-semibold text-charcoal dark:text-pearl">
                             {item.title}
                           </h4>
                           <p className="text-[#760C0F] font-medium">
                             {item.institution}
                           </p>
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                          <p className="text-charcoal dark:text-pearl leading-relaxed">
                             {item.description}
                           </p>
                           
                           {/* Technologies */}
                           {item.technologies && (
                             <div className="pt-4">
-                              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{t('journey.technologies_label')}</p>
+                              <p className="text-sm text-charcoal dark:text-pearl mb-2 font-medium">{t('journey.technologies_label')}</p>
                               <div className="flex flex-wrap gap-2">
                                 {item.technologies.map((tech: string, techIndex: number) => (
                                   <span
                                     key={techIndex}
-                                    className="text-xs bg-white/20 dark:bg-black/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md"
+                                    className="text-xs text-charcoal dark:text-pearl px-2 py-1 rounded-md border border-gray-300 dark:border-gray-600"
                                   >
                                     {tech}
                                   </span>

@@ -66,7 +66,7 @@
 
   body {
     background-color: var(--background);
-    color: var(--foreground);
+    color: #374151; /* gray-700 para light mode */
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-synthesis: none;
@@ -79,13 +79,26 @@
     line-height: 1.5;
   }
 
+  .dark body {
+    color: var(--foreground); /* Solo en dark mode usar foreground */
+  }
+
   /* Mejoras de tipografía */
   h1, h2, h3, h4, h5, h6 {
-    color: var(--foreground);
+    color: #374151; /* gray-700 */
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: var(--foreground);
+  }
+
+  /* Clase para la fuente Filena */
+  .font-filena {
+    font-family: var(--font-filena), 'Inter', ui-sans-serif, system-ui, sans-serif;
   }
 
   p {
@@ -194,13 +207,77 @@
     transition: transform 0.3s ease;
   }
 
-  .hover-scale:hover {
+    .hover-scale:hover {
     transform: scale(1.02);
   }
 
-  /* Secciones con variaciones de fondo */
+  /* Colores vinotinto personalizados */
+  .bg-vinotinto {
+    background-color: #760C0F;
+  }
+
+  .bg-vinotinto-light {
+    background-color: #8B1538;
+  }
+
+  .text-vinotinto {
+    color: #760C0F;
+  }
+
+  .text-vinotinto-light {
+    color: #8B1538;
+  }
+
+  .border-vinotinto\/50 {
+    border-color: rgba(118, 12, 15, 0.5);
+  }
+
+  .border-vinotinto-light\/50 {
+    border-color: rgba(139, 21, 56, 0.5);
+  }
+
+  .hover\:bg-vinotinto\/10:hover {
+    background-color: rgba(118, 12, 15, 0.1);
+  }
+
+  .hover\:bg-vinotinto-light\/20:hover {
+    background-color: rgba(139, 21, 56, 0.2);
+  }
+
+  .hover\:bg-vinotinto-dark:hover {
+    background-color: #5D0A0C;
+  }
+
+  .dark .hover\:bg-vinotinto-dark:hover {
+    background-color: #A01B42;
+  }
+
+  /* Gradientes vinotinto */
+  .bg-gradient-vinotinto {
+    background: linear-gradient(135deg, #760C0F 0%, #8B1538 100%);
+  }
+
+  .hover\:bg-gradient-vinotinto-dark:hover {
+    background: linear-gradient(135deg, #5D0A0C 0%, #760C0F 100%);
+  }
+
+  .dark .hover\:bg-gradient-vinotinto-dark:hover {
+    background: linear-gradient(135deg, #8B1538 0%, #A01B42 100%);
+  }
+
+  /* Secciones temáticas */
   .section-primary {
     background: var(--background);
+    color: var(--foreground);
+  }
+
+  .section-about {
+    background: linear-gradient(135deg, #FEFDFF 0%, #F8F7F9 50%, #FEFDFF 100%);
+    color: var(--foreground);
+  }
+
+  .dark .section-about {
+    background: linear-gradient(135deg, #161925 0%, #1A1D2E 50%, #161925 100%);
     color: var(--foreground);
   }
 

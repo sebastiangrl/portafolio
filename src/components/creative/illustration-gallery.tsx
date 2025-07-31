@@ -125,7 +125,7 @@ export function IllustrationGallery() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-light !text-gray-900 dark:!text-white mb-4">
+            <h2 className="font-filena text-4xl md:text-5xl lg:text-6xl font-light text-charcoal dark:text-pearl mb-8 decoration-line">
               {t('title')}
             </h2>
             <div className="w-20 h-0.5 bg-gradient-to-r from-red-600 to-red-800 mx-auto"></div>

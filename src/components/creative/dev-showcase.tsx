@@ -21,7 +21,7 @@ export function DevShowcase() {
   };
 
   return (
-    <div className="py-16 px-6 bg-gradient-to-br from-red-900/20 via-red-800/10 to-red-700/20 dark:from-red-900/30 dark:via-red-800/20 dark:to-red-700/30">
+    <div className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -31,12 +31,11 @@ export function DevShowcase() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-light !text-gray-900 dark:!text-white mb-4">
+          <h2 className="font-filena text-3xl md:text-4xl !text-gray-900 dark:!text-white mb-4">
             {t('title')}
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            Aplicaciones web modernas construidas con las últimas tecnologías. 
-            Cada proyecto combina funcionalidad excepcional con diseño visual impactante.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -78,7 +77,7 @@ export function DevShowcase() {
                       <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-red-50/50 via-red-100/30 to-red-200/50 dark:from-red-900/20 dark:via-red-800/20 dark:to-red-700/20">
                         <div className="text-center">
                           <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-black/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/10 flex items-center justify-center shadow-lg">
-                            <Monitor className="w-8 h-8 text-red-600 dark:text-red-400" />
+                            <Monitor className="w-8 h-8 text-vinotinto dark:text-vinotinto-light" />
                           </div>
                           <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-1">
                             {project.title}
@@ -103,7 +102,7 @@ export function DevShowcase() {
                           >
                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                               <ExternalLink className="w-4 h-4 mr-2" />
-                              Ver sitio
+                              {t('actions.live_demo')}
                             </a>
                           </Button>
                           {project.codeUrl && (
@@ -115,7 +114,7 @@ export function DevShowcase() {
                             >
                               <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                                 <Github className="w-4 h-4 mr-2" />
-                                Código
+                                {t('actions.view_code')}
                               </a>
                             </Button>
                           )}
@@ -151,7 +150,7 @@ export function DevShowcase() {
                 <div className={`space-y-4 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   {/* Category & Year */}
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center px-2 py-1 bg-black/20 dark:bg-white/10 backdrop-blur-md border border-white/20 dark:border-white/10 text-red-700 dark:text-red-300 rounded-full text-xs font-medium">
+                    <span className="inline-flex items-center px-2 py-1 bg-black/20 dark:bg-white/10 backdrop-blur-md border border-white/20 dark:border-white/10 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium">
                       <Code2 className="w-3 h-3 mr-1" />
                       {project.category}
                     </span>
@@ -173,7 +172,7 @@ export function DevShowcase() {
                   {/* Features */}
                   <div>
                     <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
-                      Características principales
+                      {t('features')}
                     </h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
                       {project.features.map((feature, featureIndex) => (
@@ -184,7 +183,7 @@ export function DevShowcase() {
                           transition={{ delay: featureIndex * 0.1 }}
                           className="flex items-center space-x-2 text-xs text-gray-700 dark:text-gray-300"
                         >
-                          <Zap className="w-3 h-3 text-red-600 dark:text-red-400 flex-shrink-0" />
+                          <Zap className="w-3 h-3 text-vinotinto dark:text-vinotinto-light flex-shrink-0" />
                           <span>{feature}</span>
                         </motion.div>
                       ))}
@@ -194,7 +193,7 @@ export function DevShowcase() {
                   {/* Technologies */}
                   <div>
                     <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
-                      Stack tecnológico
+                      {t('technologies')}
                     </h4>
                     <div className="flex flex-wrap gap-1">
                       {project.technologies.map((tech, techIndex) => (
@@ -214,12 +213,12 @@ export function DevShowcase() {
                   {/* Stats */}
                   <div>
                     <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
-                      Resultados
+                      {t('results')}
                     </h4>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                       {Object.entries(project.stats).map(([key, value]) => (
                         <div key={key} className="text-center p-2 bg-black/20 dark:bg-white/10 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-lg">
-                          <div className="text-base font-bold text-red-600 dark:text-red-400">
+                          <div className="text-base font-bold text-gray-800 dark:text-gray-200">
                             {value}
                           </div>
                           <div className="text-xs text-gray-600 dark:text-gray-400 capitalize">
@@ -233,26 +232,26 @@ export function DevShowcase() {
                   {/* Actions */}
                   <div className={`flex flex-col sm:flex-row gap-3 ${!project.codeUrl ? 'sm:flex-col' : ''}`}>
                     <Button
-                      className={`bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white border border-red-500/50 ${
+                      className={`bg-gradient-vinotinto hover:bg-gradient-vinotinto-dark text-white border border-white/20 transition-all duration-300 ${
                         !project.codeUrl ? 'w-full' : 'flex-1'
                       }`}
                       asChild
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Ver proyecto
+                        {t('actions.live_demo')}
                       </a>
                     </Button>
                     
                     {project.codeUrl && (
                       <Button 
                         variant="outline" 
-                        className="flex-1 border-red-600/50 text-red-600 hover:bg-red-50 dark:border-red-400/50 dark:text-red-400 dark:hover:bg-red-900/20" 
+                        className="flex-1 bg-white/10 border-white/30 text-gray-800 dark:text-gray-200 hover:bg-white/20 dark:hover:bg-white/20 transition-all duration-300" 
                         asChild
                       >
                         <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                           <Github className="w-4 h-4 mr-2" />
-                          Ver código
+                          {t('actions.view_code')}
                         </a>
                       </Button>
                     )}
@@ -262,7 +261,7 @@ export function DevShowcase() {
                   {project.client && (
                     <div className="pt-4 border-t border-red-200/50 dark:border-red-700/50">
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Cliente: <span className="font-medium text-gray-900 dark:text-white">{project.client}</span>
+                        {t('client')}: <span className="font-medium text-gray-900 dark:text-white">{project.client}</span>
                       </p>
                     </div>
                   )}
@@ -286,7 +285,7 @@ export function DevShowcase() {
               size="default"
             >
               <ChevronDown className="w-4 h-4 mr-2" />
-              Cargar más proyectos
+              {t('actions.load_more')}
             </Button>
           </motion.div>
         )}

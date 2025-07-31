@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, ShoppingCart, Building2, Zap, Palette } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { scrollToElement } from '@/lib/utils';
@@ -88,7 +88,7 @@ export function HeroCreative() {
                 alt="Sebastián González Logo"
                 width={200}
                 height={200}
-                className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 drop-shadow-2xl"
+                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 drop-shadow-2xl"
                 priority
               />
             </motion.div>
@@ -101,13 +101,46 @@ export function HeroCreative() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 tracking-wide">
+            <h1 className="font-filena text-3xl md:text-4xl lg:text-5xl text-white mb-6 tracking-wide leading-tight">
               {t('title')}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-l text-gray-300 max-w-4xl mx-auto leading-relaxed font-light mb-8">
               {t('subtitle')}
             </p>
+
+            {/* Services highlight - what you do clearly */}
+            <motion.div
+              className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            >
+              <div className="flex items-center space-x-3 text-white/90">
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <ShoppingCart className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-medium">{t('services.ecommerce')}</span>
+              </div>
+              <div className="flex items-center space-x-3 text-white/90">
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <Building2 className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-medium">{t('services.corporate')}</span>
+              </div>
+              <div className="flex items-center space-x-3 text-white/90">
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <Zap className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-medium">{t('services.webapps')}</span>
+              </div>
+              <div className="flex items-center space-x-3 text-white/90">
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <Palette className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-medium">{t('services.design')}</span>
+              </div>
+            </motion.div>
           </motion.div>
           
           {/* Elegant CTA Buttons */}

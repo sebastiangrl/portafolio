@@ -7,7 +7,6 @@ import { TechSkills } from '@/components/creative/tech-skills';
 import { AboutDual } from '@/components/sections/about-dual';
 import { ContactCreative } from '@/components/sections/contact-creative';
 import { SupportSection } from '@/components/sections/support-section';
-import { SectionTransition } from '@/components/ui/section-transition';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -29,7 +28,7 @@ export default async function HomePage({ params }: PageProps) {
       </section>
 
       {/* Proyectos de desarrollo */}
-      <section id="development" className="py-24 section-accent">
+      <section id="development" className="py-24">
         <DevShowcase />
       </section>
 
@@ -38,21 +37,18 @@ export default async function HomePage({ params }: PageProps) {
         <TechSkills />
       </section>
 
-      {/* Elegant Transition */}
-      <SectionTransition variant="gradient" />
-
       {/* About dual */}
-      <section id="about" className="section-primary">
+      <section id="about" className="py-24 section-about">
         <AboutDual />
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 section-accent">
+      <section id="contact" className="py-20 section-muted">
         <ContactCreative />
       </section>
 
       {/* Support Section */}
-      <section id="support" className="section-primary">
+      <section id="support">
         <SupportSection />
       </section>
     </CreativeLayout>

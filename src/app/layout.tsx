@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { filena, fontVariables } from '@/lib/fonts';
 import '@/styles/globals.css';
 
 const inter = Inter({ 
@@ -49,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${fontVariables}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

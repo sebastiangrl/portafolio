@@ -15,8 +15,10 @@
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Sebastián",
-    "title": "Multimedia Engineer",
-    "subtitle": "Full-Stack Developer specialized in WordPress, Next.js and e-commerce",
+    "title": "I create websites and digital solutions for your business",
+    "subtitle": "Multimedia Engineer with 5+ years building e-commerce sites, corporate websites, and custom web applications. I help businesses grow online with modern technology.",
+    "web_developer": "Web Developer & Digital Creator",
+    "web_description": "Crafting modern, responsive websites and applications that drive business growth",
     "location": "Pereira, Risaralda - Colombia",
     "status": "Available for projects",
     "modes": {
@@ -32,6 +34,18 @@
       "illustration": "Creating visual worlds that inspire and connect emotions through digital art",
       "development": "Building exceptional web experiences with clean code and scalable architectures"
     },
+    "services": {
+      "websites": "Modern Websites",
+      "websites_desc": "Responsive, fast-loading websites that convert visitors into customers",
+      "apps": "Web Applications",
+      "apps_desc": "Custom web apps built with the latest technologies for optimal performance",
+      "design": "UI/UX Design",
+      "design_desc": "Beautiful, intuitive interfaces that provide exceptional user experiences",
+      "ecommerce": "Online Stores",
+      "corporate": "Corporate Websites",
+      "webapps": "Web Applications",
+      "uiux": "UI/UX Design"
+    },
     "skills": {
       "illustration": ["Illustrator", "Photoshop", "Character Design", "Digital Art"],
       "development": ["Next.js", "React", "TypeScript", "WordPress"]
@@ -41,8 +55,8 @@
       "message": "Send message",
       "projects": "View Projects",
       "download_cv": "Download CV",
-      "explore_work": "Explore My Work",
-      "collaborate": "Let's Collaborate",
+      "explore_work": "See My Work",
+      "collaborate": "Start Your Project",
       "discover_work": "Discover my work"
     }
   },
@@ -160,6 +174,8 @@
     },
     "features": "Key Features",
     "technologies": "Technologies",
+    "results": "Results",
+    "client": "Client",
     "stats_labels": {
       "performance": "Performance",
       "mobile_score": "Mobile Score",
@@ -211,6 +227,7 @@
     }
   },
   "footer": {
+    "role": "Multimedia Engineer",
     "work": "Work",
     "info": "Information", 
     "follow_me": "Follow me:",
