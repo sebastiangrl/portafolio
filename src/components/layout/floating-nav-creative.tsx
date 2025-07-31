@@ -3,16 +3,17 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Palette, Code, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen } from 'lucide-react';
+import { Palette, Code, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen, Briefcase } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { cn, scrollToElement } from '@/lib/utils';
 
 const navigation = [
-  { key: 'navigation.home', href: '#hero', icon: Home },
-  { key: 'navigation.illustrations', href: '#illustrations', icon: Palette },
-  { key: 'navigation.development', href: '#development', icon: Code },
+  { key: 'navigation.home', href: '/', icon: Home },
+  { key: 'navigation.entrepreneurs', href: '/entrepreneurs', icon: Briefcase },
+  { key: 'navigation.about', href: '#about', icon: Code },
   { key: 'navigation.contact', href: '#contact', icon: Mail },
 ];
 
@@ -23,13 +24,21 @@ const creativeDropdown = [
 
 export function FloatingNavCreative() {
   const t = useTranslations();
+  const pathname = usePathname();
   const [activeSection] = React.useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const handleNavClick = (href: string) => {
     if (href.startsWith('#')) {
-      scrollToElement(href.substring(1));
-      setIsMobileMenuOpen(false);
+      // Si estamos en la página de emprendedores y hacemos clic en una sección anchor
+      if (pathname === '/entrepreneurs') {
+        // Ir a la página principal y luego hacer scroll a la sección
+        window.location.href = `/${href}`;
+      } else {
+        // Estamos en la página principal, hacer scroll normal
+        scrollToElement(href.substring(1));
+        setIsMobileMenuOpen(false);
+      }
     } else if (href.startsWith('/')) {
       // Navigate to separate page
       window.location.href = href;
@@ -51,14 +60,18 @@ export function FloatingNavCreative() {
             <div className="flex items-center space-x-4">
               {navigation.map((item) => {
                 const Icon = item.icon;
-                const isActive = activeSection === item.href.substring(1);
+                // Determinar si está activo basado en la URL actual
+                const isActive = item.href === '/' 
+                  ? pathname === '/' 
+                  : pathname === item.href || 
+                    (item.href.startsWith('#') && activeSection === item.href.substring(1));
                 
                 return (
                   <button
                     key={item.key}
                     onClick={() => handleNavClick(item.href)}
                     className={cn(
-                      "flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300",
+                      "flex items-center space-x-2 px-6 py-2 rounded-xl text-sm font-medium transition-all duration-300 whitespace-nowrap",
                       isActive
                         ? "bg-white text-gray-900 shadow-lg"
                         : "text-white hover:bg-white/10"
@@ -72,7 +85,7 @@ export function FloatingNavCreative() {
               
               {/* Creative Dropdown */}
               <div className="relative group">
-                <button className="flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-white hover:bg-white/10">
+                <button className="flex items-center space-x-2 px-6 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-white hover:bg-white/10 whitespace-nowrap">
                   <Feather className="w-4 h-4" />
                   <span>{t('navigation.creative')}</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />

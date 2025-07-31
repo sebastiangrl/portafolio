@@ -1,19 +1,16 @@
 {
   "navigation": {
     "home": "Inicio",
-    "about": "Acerca",
-    "experience": "Experiencia",
-    "projects": "Proyectos",
-    "skills": "Habilidades",
+    "about": "Sobre mí",
+    "entrepreneurs": "Para Emprendedores",
     "contact": "Contacto",
-    "support": "Apoyo",
-    "dashboard": "Dashboard",
-    "work": "Trabajo",
-    "illustrations": "Ilustraciones",
-    "development": "Desarrollo",
     "creative": "Creativo",
     "stories": "Historias",
-    "blog": "Blog"
+    "blog": "Blog",
+    "illustrations": "Ilustraciones",
+    "development": "Desarrollo",
+    "skills": "Habilidades",
+    "support": "Apoyo"
   },
   "hero": {
     "greeting": "Hola, soy",
@@ -257,6 +254,102 @@
       "email": "Email",
       "whatsapp": "WhatsApp", 
       "location": "Ubicación"
+    }
+  },
+  "entrepreneurs": {
+    "badge": "Soluciones Empresariales",
+    "title": "Para Emprendedores",
+    "subtitle": "Entiendo los desafíos del emprendimiento porque también soy emprendedor.",
+    "intro": "Ofrezco servicios flexibles que se adaptan a tus necesidades y presupuesto.",
+    "services": {
+      "title": "Servicios para Tu Negocio",
+      "getQuote": "Obtener Cotización",
+      "quoteForm": "Formulario de Cotización",
+      "website": {
+        "title": "Sitios Web Corporativos",
+        "description": "Sitios web profesionales que reflejan la calidad de tu marca y convierten visitantes en clientes.",
+        "features": {
+          "0": "Diseño responsivo y moderno",
+          "1": "Optimización SEO",
+          "2": "Integración de formularios de contacto",
+          "3": "Configuración de Google Analytics"
+        }
+      },
+      "ecommerce": {
+        "title": "Tiendas en Línea",
+        "description": "Plataformas de e-commerce completas para vender tus productos en línea con sistemas de pago seguros.",
+        "features": {
+          "0": "Gestión de catálogo de productos",
+          "1": "Procesamiento seguro de pagos",
+          "2": "Control de inventario",
+          "3": "Análisis de ventas"
+        }
+      },
+      "menu": {
+        "title": "Menús Digitales",
+        "description": "Menús digitales con QR para restaurantes y bares, fáciles de actualizar y amigables para el cliente.",
+        "features": {
+          "0": "Generación de código QR",
+          "1": "Actualizaciones fáciles del menú",
+          "2": "Información de alérgenos",
+          "3": "Soporte multiidioma"
+        }
+      }
+    },
+    "approach": {
+      "title": "Mi Enfoque",
+      "description": "Como emprendedor, sé que cada negocio es único. Por eso ofrezco soluciones personalizadas.",
+      "points": {
+        "0": "Planes de pago flexibles adaptados a tu flujo de caja",
+        "1": "Comunicación directa sin intermediarios",
+        "2": "Tiempos de entrega rápidos para entrada rápida al mercado",
+        "3": "Soporte continuo para el crecimiento de tu negocio",
+        "4": "Precios honestos sin costos ocultos"
+      },
+      "benefits": {
+        "growth": {
+          "title": "Crecimiento",
+          "description": "Soluciones que escalan con tu negocio"
+        },
+        "support": {
+          "title": "Soporte",
+          "description": "Acompañamiento continuo"
+        },
+        "flexibility": {
+          "title": "Flexibilidad",
+          "description": "Pagos adaptados a tu flujo"
+        },
+        "communication": {
+          "title": "Comunicación",
+          "description": "Directo, sin intermediarios"
+        }
+      }
+    },
+    "process": {
+      "title": "Cómo Trabajamos",
+      "steps": {
+        "0": {
+          "title": "Consulta Gratuita",
+          "description": "Discutimos tus necesidades y objetivos por WhatsApp o videollamada."
+        },
+        "1": {
+          "title": "Propuesta Personalizada",
+          "description": "Creo una propuesta adaptada a tu presupuesto y cronograma."
+        },
+        "2": {
+          "title": "Desarrollo",
+          "description": "Trabajo en tu proyecto con actualizaciones constantes del progreso."
+        },
+        "3": {
+          "title": "Lanzamiento y Soporte",
+          "description": "Lanzamos tu proyecto y brindo soporte continuo."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Hacer Crecer Tu Negocio?",
+      "description": "Programemos una consulta gratuita para discutir cómo puedo ayudarte a alcanzar tus objetivos.",
+      "button": "Consulta Gratuita"
     }
   },
   "blog": {

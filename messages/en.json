@@ -2,18 +2,15 @@
   "navigation": {
     "home": "Home",
     "about": "About",
-    "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
+    "entrepreneurs": "For Entrepreneurs",
     "contact": "Contact",
-    "support": "Support",
-    "dashboard": "Dashboard",
-    "work": "Work",
-    "illustrations": "Illustrations",
-    "development": "Development",
     "creative": "Creative",
     "stories": "Stories",
-    "blog": "Blog"
+    "blog": "Blog",
+    "illustrations": "Illustrations",
+    "development": "Development",
+    "skills": "Skills",
+    "support": "Support"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -258,6 +255,102 @@
     "frontend": "Frontend",
     "backend": "Backend & Database",
     "tools": "DevOps & Deployment"
+  },
+  "entrepreneurs": {
+    "badge": "Business Solutions",
+    "title": "For Entrepreneurs",
+    "subtitle": "I understand the challenges of entrepreneurship because I'm an entrepreneur too.",
+    "intro": "I offer flexible services that adapt to your needs and budget.",
+    "services": {
+      "title": "Services for Your Business",
+      "getQuote": "Get Quote",
+      "quoteForm": "Quote Form",
+      "website": {
+        "title": "Corporate Websites",
+        "description": "Professional websites that reflect your brand's quality and convert visitors into customers.",
+        "features": {
+          "0": "Responsive and modern design",
+          "1": "SEO optimization",
+          "2": "Contact forms integration",
+          "3": "Google Analytics setup"
+        }
+      },
+      "ecommerce": {
+        "title": "Online Stores",
+        "description": "Complete e-commerce platforms to sell your products online with secure payment systems.",
+        "features": {
+          "0": "Product catalog management",
+          "1": "Secure payment processing",
+          "2": "Inventory control",
+          "3": "Sales analytics"
+        }
+      },
+      "menu": {
+        "title": "Digital Menus",
+        "description": "QR digital menus for restaurants and bars, easy to update and customer-friendly.",
+        "features": {
+          "0": "QR code generation",
+          "1": "Easy menu updates",
+          "2": "Allergen information",
+          "3": "Multi-language support"
+        }
+      }
+    },
+    "approach": {
+      "title": "My Approach",
+      "description": "As an entrepreneur, I know that every business is unique. That's why I offer personalized solutions.",
+      "points": {
+        "0": "Flexible payment plans adapted to your cash flow",
+        "1": "Direct communication without intermediaries",
+        "2": "Fast delivery times for quick market entry",
+        "3": "Ongoing support for your business growth",
+        "4": "Honest pricing without hidden costs"
+      },
+      "benefits": {
+        "growth": {
+          "title": "Growth",
+          "description": "Solutions that scale with your business"
+        },
+        "support": {
+          "title": "Support",
+          "description": "Continuous guidance"
+        },
+        "flexibility": {
+          "title": "Flexibility",
+          "description": "Payments adapted to your flow"
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Direct, no intermediaries"
+        }
+      }
+    },
+    "process": {
+      "title": "How We Work",
+      "steps": {
+        "0": {
+          "title": "Free Consultation",
+          "description": "We discuss your needs and goals via WhatsApp or video call."
+        },
+        "1": {
+          "title": "Custom Proposal",
+          "description": "I create a proposal tailored to your budget and timeline."
+        },
+        "2": {
+          "title": "Development",
+          "description": "I work on your project with constant updates on progress."
+        },
+        "3": {
+          "title": "Launch & Support",
+          "description": "We launch your project and I provide ongoing support."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Grow Your Business?",
+      "description": "Let's schedule a free consultation to discuss how I can help you achieve your goals.",
+      "button": "Free Consultation"
+    }
   },
   "blog": {
     "title": "Blog",
