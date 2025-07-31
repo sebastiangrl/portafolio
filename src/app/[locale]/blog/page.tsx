@@ -7,7 +7,7 @@ interface BlogPageProps {
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  const { locale } = await params;
+  await params; // Consume params to avoid unused variable warning
   
   return (
     <CreativeLayout>

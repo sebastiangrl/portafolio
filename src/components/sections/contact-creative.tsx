@@ -7,11 +7,6 @@ import {
   Send, 
   Mail, 
   MessageCircle, 
-  ExternalLink,
-  Github,
-  Linkedin,
-  Instagram,
-  Coffee,
   Heart
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -62,33 +57,6 @@ export function ContactCreative() {
       action: t('methods.typeform.action'),
       href: 'https://typeform.com/to/your-form-id', // Aquí podrías usar Typeform
       color: 'from-[#760C0F] to-[#A31B1B]'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      name: 'GitHub',
-      handle: '@sebastiangrl',
-      description: t('social.github'),
-      href: 'https://github.com/sebastiangrl/',
-      color: 'hover:text-gray-900 dark:hover:text-white'
-    },
-    {
-      icon: Linkedin,
-      name: 'LinkedIn',
-      handle: 'j-sebastian-gonzalez',
-      description: t('social.linkedin'),
-      href: 'https://www.linkedin.com/in/j-sebastian-gonzalez/',
-      color: 'hover:text-blue-600'
-    },
-    {
-      icon: Instagram,
-      name: 'Instagram',
-      handle: '@tu_arte',
-      description: t('social.instagram'),
-      href: '#',
-      color: 'hover:text-pink-600'
     }
   ];
 
@@ -143,7 +111,7 @@ export function ContactCreative() {
                 >
                   {isMounted ? (
                     <div 
-                      {...({ 'data-tf-live': '01K1EM59GZTZ22GBYASYQSF4G3' } as any)}
+                      {...({ 'data-tf-live': '01K1EM59GZTZ22GBYASYQSF4G3' } as Record<string, string>)}
                       className="w-full h-full min-h-[500px]"
                     ></div>
                   ) : (

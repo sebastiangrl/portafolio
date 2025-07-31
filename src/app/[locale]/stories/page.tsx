@@ -7,7 +7,7 @@ interface StoriesPageProps {
 }
 
 export default async function StoriesPage({ params }: StoriesPageProps) {
-  const { locale } = await params;
+  await params; // Consume params to avoid unused variable warning
   
   return (
     <CreativeLayout>

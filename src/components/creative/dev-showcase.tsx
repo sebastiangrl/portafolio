@@ -5,18 +5,18 @@ import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Code2, Smartphone, Monitor, Zap, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { mainProjects, additionalProjects, type WebProject } from '@/data/dev-projects';
+import { mainProjects, additionalProjects, WebProject } from '@/data/dev-projects';
 import { useTranslations } from 'next-intl';
 
 export function DevShowcase() {
-  const t = useTranslations('projects');
-  const [showAdditional, setShowAdditional] = React.useState(false);
-  const [displayedProjects, setDisplayedProjects] = React.useState(mainProjects);
+  const t = useTranslations('development');
+  const [displayedProjects, setDisplayedProjects] = React.useState<WebProject[]>(mainProjects);
+  const [showAll, setShowAll] = React.useState(false);
 
   const handleLoadMore = () => {
-    if (!showAdditional) {
+    if (!showAll) {
       setDisplayedProjects([...mainProjects, ...additionalProjects]);
-      setShowAdditional(true);
+      setShowAll(true);
     }
   };
 
@@ -273,7 +273,7 @@ export function DevShowcase() {
         </div>
 
         {/* Load More Button */}
-        {!showAdditional && (
+        {!showAll && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

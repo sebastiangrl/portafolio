@@ -82,7 +82,7 @@ export function IllustrationGallery() {
   const featuredIllustration = illustrations[featuredIndex];
   const smallerIllustrations = illustrations.filter((_, index) => index !== featuredIndex);
 
-  const handleImageSelect = (illustration: Illustration, index: number) => {
+  const handleImageSelect = (illustration: Illustration, _index: number) => {
     // Encuentra el índice real en el array original
     const realIndex = illustrations.findIndex(ill => ill.id === illustration.id);
     setFeaturedIndex(realIndex);

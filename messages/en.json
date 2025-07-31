@@ -141,6 +141,35 @@
       }
     }
   },
+  "development": {
+    "title": "Development Projects",
+    "subtitle": "Web solutions built with modern technologies",
+    "stats": {
+      "projects": "Projects completed",
+      "technologies": "Technologies mastered",
+      "experience": "Years of experience"
+    },
+    "categories": {
+      "all": "All Projects",
+      "ecommerce": "E-commerce",
+      "corporate": "Corporate",
+      "personal": "Personal"
+    },
+    "actions": {
+      "live_demo": "Live Demo",
+      "view_code": "View Code",
+      "case_study": "Case Study",
+      "load_more": "Load More Projects"
+    },
+    "features": "Key Features",
+    "technologies": "Technologies",
+    "stats_labels": {
+      "performance": "Performance",
+      "mobile_score": "Mobile Score",
+      "seo_score": "SEO Score",
+      "completion_time": "Completion Time"
+    }
+  },
   "contact": {
     "title": "Let's Work Together!",
     "subtitle": "Do you have a project in mind? I love collaborating on innovative ideas.",

@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Palette, Code, User, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen } from 'lucide-react';
+import { Palette, Code, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
@@ -23,7 +23,7 @@ const creativeDropdown = [
 
 export function FloatingNavCreative() {
   const t = useTranslations();
-  const [activeSection, setActiveSection] = React.useState('hero');
+  const [activeSection] = React.useState('hero');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const handleNavClick = (href: string) => {

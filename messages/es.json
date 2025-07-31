@@ -172,6 +172,35 @@
     "backend": "Backend & Database",
     "tools": "DevOps & Deployment"
   },
+  "development": {
+    "title": "Proyectos de Desarrollo",
+    "subtitle": "Soluciones web construidas con tecnologías modernas",
+    "stats": {
+      "projects": "Proyectos completados",
+      "technologies": "Tecnologías dominadas",
+      "experience": "Años de experiencia"
+    },
+    "categories": {
+      "all": "Todos los Proyectos",
+      "ecommerce": "E-commerce",
+      "corporate": "Corporativo",
+      "personal": "Personal"
+    },
+    "actions": {
+      "live_demo": "Demo en Vivo",
+      "view_code": "Ver Código",
+      "case_study": "Caso de Estudio",
+      "load_more": "Cargar Más Proyectos"
+    },
+    "features": "Características Clave",
+    "technologies": "Tecnologías",
+    "stats_labels": {
+      "performance": "Rendimiento",
+      "mobile_score": "Puntuación Móvil",
+      "seo_score": "Puntuación SEO",
+      "completion_time": "Tiempo de Finalización"
+    }
+  },
   "contact": {
     "title": "¡Trabajemos Juntos!",
     "subtitle": "¿Tienes un proyecto en mente? Me encanta colaborar en ideas innovadoras.",

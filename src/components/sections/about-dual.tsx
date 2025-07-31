@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GraduationCap, Code2, Palette, Calendar, Award, Coffee, Gamepad2, BookOpen, Headphones, Lightbulb, Briefcase, ChevronLeft, ChevronRight } from 'lucide-react';
+import { GraduationCap, Code2, Award, Briefcase, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export function AboutDual() {
@@ -63,16 +63,6 @@ export function AboutDual() {
   const prevJourney = () => {
     setCurrentJourneyIndex((prev) => (prev - 1 + journeyData.length) % journeyData.length);
   };
-
-  // Updated interests data with translations
-  const interestsData = [
-    { icon: '🎮', name: t('interests.items.gaming.name'), description: t('interests.items.gaming.description') },
-    { icon: '📚', name: t('interests.items.scifi.name'), description: t('interests.items.scifi.description') },
-    { icon: '🎵', name: t('interests.items.music.name'), description: t('interests.items.music.description') },
-    { icon: '☕', name: t('interests.items.coffee.name'), description: t('interests.items.coffee.description') },
-    { icon: '✍️', name: t('interests.items.writing.name'), description: t('interests.items.writing.description') },
-    { icon: '🎨', name: t('interests.items.art.name'), description: t('interests.items.art.description') }
-  ];
 
   return (
     <div className="section-primary">

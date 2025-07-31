@@ -68,7 +68,7 @@ export function FloatingSocials() {
       className="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block"
     >
       <div className="flex flex-col space-y-4">
-        {socials.map((social, index) => {
+        {socials.map((social, _index) => {
           const Icon = social.icon;
           
           return (

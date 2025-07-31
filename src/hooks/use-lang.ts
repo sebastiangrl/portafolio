@@ -8,7 +8,7 @@ import { useTransition } from 'react';
 export interface UseLangReturn {
   locale: string;
   setLocale: (locale: string) => void;
-  t: (key: string, values?: Record<string, any>) => string;
+  t: (key: string, values?: Record<string, string | number>) => string;
   isPending: boolean;
   otherLocale: string;
 }

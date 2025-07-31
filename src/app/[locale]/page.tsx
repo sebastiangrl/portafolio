@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 export default async function HomePage({ params }: PageProps) {
-  const { locale } = await params;
+  await params; // Consume params to avoid unused variable warning
   
   return (
     <CreativeLayout>
