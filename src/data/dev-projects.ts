@@ -7,7 +7,8 @@ export interface WebProject {
   description: string;
   longDescription: string;
   technologies: string[];
-  image: string;
+  image: string; // Imagen principal (escritorio)
+  mobileImage?: string; // Imagen móvil opcional
   liveUrl: string;
   codeUrl?: string; // Solo proyectos didácticos
   features: string[];
@@ -25,18 +26,19 @@ export const mainProjects: WebProject[] = [
     id: "sevenclub-web",
     title: "SevenClub Platform",
     category: "Full-Stack Development",
-    description: "Marketplace que conecta marcas con influencers usando AI para matching inteligente",
-    longDescription: "Plataforma completa de marketplace que utiliza algoritmos de machine learning para conectar marcas con los influencers más adecuados. Incluye dashboard en tiempo real, sistema de pagos, analytics avanzados y chat integrado.",
+    description: "Marketplace que conecta marcas con influencers",
+    longDescription: "Plataforma completa para conectar marcas con los influencers más adecuados. Incluye dashboard en tiempo real, sistema de pagos y analytics avanzados.",
     technologies: ["Next.js", "Supabase", "React", "Tailwind CSS", "TypeScript", "Stripe"],
-    image: "/projects/sevenclub.jpg",
+    image: "/projects/SevenClubDesk.webp",
+    mobileImage: "/projects/SevenClubMobile.webp",
     liveUrl: "https://sevenclub.club",
     features: [
       "Dashboard en tiempo real",
-      "Sistema de matching con IA",
-      "Pagos integrados con Stripe",
+      "Sistema de eventos",
+      "Pagos integrados",
       "Analytics y métricas",
-      "Chat en tiempo real",
-      "Sistema de reviews"
+      "SEO Optimizado",
+      "Tres dashboards"
     ],
     year: 2025,
     client: "SevenClub",

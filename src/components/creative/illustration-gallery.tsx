@@ -5,6 +5,7 @@ import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Image } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import NextImage from 'next/image';
 
 interface Illustration {
   id: string;
@@ -16,6 +17,13 @@ interface Illustration {
 
 // Galería curada con distribución artística
 const illustrations: Illustration[] = [
+  {
+    id: "grefg-illustration",
+    title: "Grefg",
+    category: "Character Design",
+    description: "Ilustración digital de TheGrefg en estilo cartoon.",
+    image: "/illustrations/Grefg.webp"
+  },
   {
     id: "hero-illustration",
     title: "Digital Dreams",
@@ -142,7 +150,24 @@ export function IllustrationGallery() {
               className="col-span-12 md:col-span-5 row-span-8 relative group cursor-pointer overflow-hidden rounded-2xl bg-black/20 dark:bg-white/10 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-xl hover:shadow-red-600/20 transition-all duration-500"
               onClick={() => openLightbox(featuredIllustration)}
             >
-              <div className="absolute inset-0 bg-gray-50/50 dark:bg-gray-800/50 group-hover:bg-gray-100/50 dark:group-hover:bg-gray-700/50 transition-all duration-500">
+              {/* Real Image */}
+              <NextImage
+                src={featuredIllustration.image}
+                alt={featuredIllustration.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={featuredIndex === 0}
+                onError={(e) => {
+                  // Fallback to placeholder if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.parentElement?.querySelector('.fallback-placeholder')?.classList.remove('hidden');
+                }}
+              />
+              
+              {/* Fallback placeholder (hidden by default) */}
+              <div className="fallback-placeholder hidden absolute inset-0 bg-gray-50/50 dark:bg-gray-800/50 group-hover:bg-gray-100/50 dark:group-hover:bg-gray-700/50 transition-all duration-500">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-gray-600 dark:text-gray-300">
                     <div className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-3 rounded-xl bg-black/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
@@ -152,6 +177,18 @@ export function IllustrationGallery() {
                       {featuredIllustration.title}
                     </h3>
                   </div>
+                </div>
+              </div>
+              
+              {/* Overlay with title */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-4 left-4">
+                  <h3 className="text-white text-xl md:text-2xl font-light mb-1">
+                    {featuredIllustration.title}
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    {featuredIllustration.category}
+                  </p>
                 </div>
               </div>
               
@@ -277,7 +314,23 @@ export function IllustrationGallery() {
               className="relative max-w-3xl max-h-[90vh] w-full aspect-[3/4] rounded-3xl overflow-hidden bg-black/20 dark:bg-white/10 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="absolute inset-0 bg-gray-50/50 dark:bg-gray-800/50">
+              {/* Real Image */}
+              <NextImage
+                src={selectedImage.image}
+                alt={selectedImage.title}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                onError={(e) => {
+                  // Fallback to placeholder if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.parentElement?.querySelector('.fallback-placeholder')?.classList.remove('hidden');
+                }}
+              />
+              
+              {/* Fallback placeholder (hidden by default) */}
+              <div className="fallback-placeholder hidden absolute inset-0 bg-gray-50/50 dark:bg-gray-800/50">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-gray-700 dark:text-gray-300">
                     <div className="w-32 h-32 mx-auto mb-6 rounded-3xl bg-black/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/10 flex items-center justify-center">
@@ -291,6 +344,19 @@ export function IllustrationGallery() {
                     </p>
                   </div>
                 </div>
+              </div>
+              
+              {/* Overlay with info */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                <h3 className="text-white text-3xl font-light mb-2">
+                  {selectedImage.title}
+                </h3>
+                <p className="text-white/90 text-lg mb-1">
+                  {selectedImage.category}
+                </p>
+                <p className="text-white/70">
+                  {selectedImage.description}
+                </p>
               </div>
             </motion.div>
           </motion.div>

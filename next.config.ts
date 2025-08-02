@@ -59,23 +59,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
-  // Configuración específica para Webpack y CSS
-  webpack: (config, { dev, isServer }) => {
-    // Configuración adicional para CSS modules si es necesario
-    if (!dev && !isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        styles: {
-          name: 'styles',
-          test: /\.(css|scss|sass)$/,
-          chunks: 'all',
-          enforce: true,
-        },
-      };
-    }
-    return config;
-  },
 };
 
 export default withNextIntl(nextConfig);

@@ -72,21 +72,30 @@ export function DevShowcase() {
                     </div>
 
                     {/* Screen Content */}
-                    <div className="relative aspect-[16/10] bg-black/20 dark:bg-white/10 backdrop-blur-md border-x border-b border-white/20 dark:border-white/10 rounded-b-xl overflow-hidden shadow-xl">
-                      {/* Placeholder Content */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-red-50/50 via-red-100/30 to-red-200/50 dark:from-red-900/20 dark:via-red-800/20 dark:to-red-700/20">
-                        <div className="text-center">
-                          <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-black/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/10 flex items-center justify-center shadow-lg">
-                            <Monitor className="w-8 h-8 text-vinotinto dark:text-vinotinto-light" />
+                    <div className="relative aspect-[1440/688] bg-black/20 dark:bg-white/10 backdrop-blur-md border-x border-b border-white/20 dark:border-white/10 rounded-b-xl overflow-hidden shadow-xl">
+                      {/* Project Image */}
+                      {project.image ? (
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        /* Placeholder Content */
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-red-50/50 via-red-100/30 to-red-200/50 dark:from-red-900/20 dark:via-red-800/20 dark:to-red-700/20">
+                          <div className="text-center">
+                            <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-black/10 dark:bg-white/10 backdrop-blur-sm border border-white/20 dark:border-white/10 flex items-center justify-center shadow-lg">
+                              <Monitor className="w-8 h-8 text-vinotinto dark:text-vinotinto-light" />
+                            </div>
+                            <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-1">
+                              {project.title}
+                            </h3>
+                            <p className="text-xs text-gray-600 dark:text-gray-400">
+                              {project.category}
+                            </p>
                           </div>
-                          <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                            {project.title}
-                          </h3>
-                          <p className="text-xs text-gray-600 dark:text-gray-400">
-                            {project.category}
-                          </p>
                         </div>
-                      </div>
+                      )}
 
                       {/* Hover Effects */}
                       <motion.div
@@ -135,12 +144,22 @@ export function DevShowcase() {
 
                     {/* Mobile Preview */}
                     <motion.div
-                      className="absolute -bottom-6 -right-6 w-20 h-36 bg-black/40 dark:bg-white/20 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl p-1 shadow-xl"
+                      className="absolute -bottom-6 -right-6 w-20 aspect-[392/765] bg-black/40 dark:bg-white/20 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-xl p-1 shadow-xl overflow-hidden"
                       whileHover={{ scale: 1.05, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="w-full h-full bg-gradient-to-b from-red-400/50 to-red-600/50 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                        <Smartphone className="w-6 h-6 text-white" />
+                      <div className="w-full h-full rounded-lg overflow-hidden">
+                        {project.mobileImage ? (
+                          <img 
+                            src={project.mobileImage} 
+                            alt={`${project.title} mobile`}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-b from-red-400/50 to-red-600/50 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                            <Smartphone className="w-6 h-6 text-white" />
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   </div>
