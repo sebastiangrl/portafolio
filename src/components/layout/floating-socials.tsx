@@ -9,7 +9,7 @@ const socials = [
   {
     name: 'Email',
     icon: Mail,
-    href: 'mailto:hola@jsebastiangonzalez.com',
+    href: 'mailto:contacto@jsebastiangonzalez.com',
     delay: 0.1
   },
   {
@@ -26,13 +26,13 @@ const socials = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/in/j-sebastian-gonzalez/',
+    href: 'https://www.linkedin.com/in/j-sebastian-gonzalez/',
     delay: 0.2
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    href: 'https://instagram.com/jsebastiangonzalez',
+    href: 'https://www.instagram.com/j.sebasgonzalez/',
     delay: 0.3
   },
   {
@@ -42,7 +42,7 @@ const socials = [
         <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.154-1.73-1.154-2.156V2h-3.591v13.104c0 .531-.407.964-.911.964s-.911-.433-.911-.964c0-.531.407-.964.911-.964.09 0 .177.013.261.037V11.37a3.774 3.774 0 0 0-.261-.009c-2.045 0-3.704 1.659-3.704 3.704s1.659 3.704 3.704 3.704 3.704-1.659 3.704-3.704V7.216a7.68 7.68 0 0 0 4.532 1.459v-2.793c-.85 0-1.638-.317-2.23-.736l-.004-.004-.566-.58z"/>
       </svg>
     ),
-    href: 'https://tiktok.com/@jsebastiangonzalez',
+    href: 'https://www.tiktok.com/@jsebasgonzalez',
     delay: 0.4
   },
   {
