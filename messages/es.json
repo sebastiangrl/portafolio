@@ -10,7 +10,8 @@
     "illustrations": "Ilustraciones",
     "development": "Desarrollo",
     "skills": "Habilidades",
-    "support": "Apoyo"
+    "support": "Apoyo",
+    "plugins": "Plugins"
   },
   "hero": {
     "greeting": "Hola, soy",
@@ -397,6 +398,37 @@
     },
     "readStory": "Leer historia",
     "comingSoon": "Nuevas historias próximamente. Un espacio donde la creatividad se encuentra con la tecnología y la imaginación se vuelve realidad."
+  },
+  "plugins": {
+    "title": "Plugins",
+    "description": "Herramientas y plugins desarrollados para facilitar el trabajo diario. Soluciones completas y profesionales listas para usar.",
+    "wordpress_plugins": "Plugins especializados para WordPress",
+    "download": "Descargar",
+    "features": "Características Principales",
+    "technologies": "Tecnologías",
+    "requirements": "Requisitos del Sistema",
+    "highlights": "Características Destacadas",
+    "donation": {
+      "title": "Apoya este proyecto",
+      "description": "Tu donación ayuda a mantener y mejorar este plugin",
+      "button": "Donar"
+    },
+    "barow": {
+      "subtitle": "Sistema de Reservas para Restaurantes",
+      "description": "Sistema completo de gestión de reservas diseñado específicamente para restaurantes, bares y establecimientos gastronómicos. Permite a tus clientes hacer reservas online de manera fácil y rápida, mientras te proporciona herramientas avanzadas de gestión y analytics.",
+      "features": {
+        "reservations": "Sistema de reservas online",
+        "clients": "Gestión de clientes",
+        "analytics": "Analytics avanzados",
+        "customization": "Personalización completa"
+      },
+      "highlights": {
+        "complete_system": "Sistema completo de gestión de reservas",
+        "real_time_analytics": "Analytics en tiempo real",
+        "client_management": "Base de datos de clientes sin duplicados",
+        "email_notifications": "Notificaciones automáticas por email"
+      }
+    }
   },
   "common": {
     "loading": "Cargando...",

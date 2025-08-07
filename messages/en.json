@@ -10,7 +10,8 @@
     "illustrations": "Illustrations",
     "development": "Development",
     "skills": "Skills",
-    "support": "Support"
+    "support": "Support",
+    "plugins": "Plugins"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -405,6 +406,37 @@
     },
     "readStory": "Read story",
     "comingSoon": "New stories coming soon. A space where creativity meets technology and imagination becomes reality."
+  },
+  "plugins": {
+    "title": "Plugins",
+    "description": "Tools and plugins developed to facilitate daily work. Complete and professional solutions ready to use.",
+    "wordpress_plugins": "Specialized plugins for WordPress",
+    "download": "Download",
+    "features": "Key Features",
+    "technologies": "Technologies",
+    "requirements": "System Requirements",
+    "highlights": "Key Highlights",
+    "donation": {
+      "title": "Support this project",
+      "description": "Your donation helps maintain and improve this plugin",
+      "button": "Donate"
+    },
+    "barow": {
+      "subtitle": "Restaurant Reservation System",
+      "description": "Complete reservation management system designed specifically for restaurants, bars and gastronomic establishments. Allows your customers to make online reservations easily and quickly, while providing you with advanced management and analytics tools.",
+      "features": {
+        "reservations": "Online reservation system",
+        "clients": "Client management",
+        "analytics": "Advanced analytics",
+        "customization": "Complete customization"
+      },
+      "highlights": {
+        "complete_system": "Complete reservation management system",
+        "real_time_analytics": "Real-time analytics",
+        "client_management": "Duplicate-free client database",
+        "email_notifications": "Automatic email notifications"
+      }
+    }
   },
   "common": {
     "loading": "Loading...",

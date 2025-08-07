@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Palette, Code, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen, Briefcase } from 'lucide-react';
+import { Palette, Code, Mail, Menu, X, ChevronDown, Home, Feather, Edit, BookOpen, Briefcase, Puzzle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
@@ -20,6 +20,7 @@ const navigation = [
 const creativeDropdown = [
   { key: 'navigation.blog', href: '/blog', icon: Edit },
   { key: 'navigation.stories', href: '/stories', icon: BookOpen },
+  { key: 'navigation.plugins', href: '/plugins', icon: Puzzle },
 ];
 
 export function FloatingNavCreative() {
